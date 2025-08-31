@@ -1,6 +1,7 @@
 # DownScaler  
 画像を任意の解像度に縮小し、ピクセルアートやゲーム用スプライト制作に適した形式へ変換するためのツールです。  
 Tkinterを用いたGUIを備えており、専門知識がなくても直感的に利用可能です。  
+  
 ▼以下のGitHubページの「ポートフォリオ_石川紀元.pdf」にて詳細に説明しています。ご確認ください。  
 https://github.com/NoriCreator/Live3D  
 
@@ -16,13 +17,18 @@ https://github.com/NoriCreator/Live3D
 
 ## ファイル構成  
 
-### ソースコード  
-- **DownScaler.py**  
-    Tkinterベースのメインアプリケーション。GUI操作による画像ファイルの入力・縮小・保存を管理します。  
+### ソースコード pixelart_downscaler_scripts  
+- **main.py**  
+    ツールのエントリーポイント。GUI操作による画像選択・サイズ指定・保存までを担当  
+
+- **downscaler/**  
+    - __init__.py … パッケージ認識用  
+    - downscaler.py … ドット絵向けダウンスケール処理本体  
+    - image_grid.py … 画像をブロック単位に分割する補助モジュール  
 
 ### 実行ファイル  
-- **DownScaler.exe**  
-    DownScaler.pyの実行ファイルです。
+- **Downscaler.exe**  
+    main.pyの実行ファイルです。
 
 ### ダウンスケール例画像  
-    実際にドット絵をダウンスケールした画像の例です。
+    実際にドット絵を縮小した画像の例です。
